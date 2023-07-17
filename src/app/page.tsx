@@ -9,7 +9,7 @@ export default function Home(){
       hover:bg-slate-700 focus-within:bg-slate-700 outline-none"
        href="/new">New</Link>
     </header>
-    <ul></ul>
+    <ul className="pl-4"></ul>
   </>
   )
 }
