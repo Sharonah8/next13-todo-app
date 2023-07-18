@@ -2,6 +2,8 @@ import Link from "next/link";
 
 async function createTodo(data:FormData) {
     "use server"
+   
+    const title = data.get("title")?.valueOf()
     
 }
 export default function Page(){
