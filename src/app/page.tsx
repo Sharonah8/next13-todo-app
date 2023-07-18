@@ -6,6 +6,10 @@ function getTodos(){
   return prisma.todo.findMany()
 }
 
+async function toggleTodo(id: string, complete: boolean) {
+  "use server"  
+}
+
 export default async function Home(){
   const todos = await getTodos()
 
