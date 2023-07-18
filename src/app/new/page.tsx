@@ -2,19 +2,21 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { prisma } from "@/db";
 
-async function createTodo(data:FormData) {
+async function createTodo(data: FormData) {
     "use server"
    
-    const title = data.get("title")?.valueOf()
-   if (typeof title !== "string" || title.length === ){
+   const title = data.get("title")?.valueOf()
+   if (typeof title !== "string" || title.length === 0){
     throw new Error("Invalid Title")
    }
 
-   await prisma.todo.create({ data: { title, complete: false }})
+   await prisma.todo.create({ data: { title, complete: false } })
    redirect("/")
 }
+
 export default function Page(){
-    return <>
+    return(
+    <>
     <header className="flex justify-between items-center mb-4">
       <h1 className="text-2xl">New</h1>
     </header>
@@ -30,4 +32,5 @@ export default function Page(){
         </div>
     </form>   
     </>
+    )
 }
