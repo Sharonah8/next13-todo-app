@@ -1,5 +1,5 @@
 "use client"
-
+// convert to a client component bc we need some client interaction due to the onChange event listener
 type TodoItemProps = {
     id: string
     title: string
