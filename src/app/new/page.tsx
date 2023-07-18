@@ -7,6 +7,9 @@ export default function Page(){
         <input type="text" name="title"
         className="border border-slate-300 bg-transparent rounded px-2 py-1
         outline-none focus-within:border-slate-100" />
+        <div>
+            
+        </div>
     </form>   
     </>
 }
