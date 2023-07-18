@@ -7,6 +7,9 @@ async function createTodo(data:FormData) {
    if (typeof title !== "string" || title.length === =){
     throw new Error("Invalid Title")
    }
+
+   await prisma.todo.create({ data: { title, complete: false }})
+   
 }
 export default function Page(){
     return <>
