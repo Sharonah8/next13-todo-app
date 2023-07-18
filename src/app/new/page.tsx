@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Page(){
     return <>
     <header className="flex justify-between items-center mb-4">
@@ -8,7 +10,7 @@ export default function Page(){
         className="border border-slate-300 bg-transparent rounded px-2 py-1
         outline-none focus-within:border-slate-100" />
         <div>
-            
+            <Link href="..">Cancel</Link>
         </div>
     </form>   
     </>
